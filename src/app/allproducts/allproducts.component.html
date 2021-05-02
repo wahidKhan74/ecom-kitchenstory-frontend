@@ -1,0 +1,26 @@
+<br><br>
+<b> Please enter the cusine you like to search : </b><input type="text" placeholder="Enter text" [(ngModel)]="cusine" (ngModelChange)="Search()"/> <br><br>
+
+<h4>Products list </h4>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Cusine</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+       </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+      <th scope="row">{{p.p_id}}</th>
+       <td>{{p.cusine}}</td>
+       <td>{{p.name}}</td>
+      <td>{{p.price}}</td>
+      </tr>
+  </tbody>
+</table>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

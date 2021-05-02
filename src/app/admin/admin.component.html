@@ -1,0 +1,30 @@
+<h4>Products list </h4>
+<button class="btn btn-primary" (click)="create()" style="float:right"  >Create</button><br><br>
+<table class="table">
+  <thead class="thead-dark" >
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Cusine</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let p of products">
+        <th scope="row">{{p.p_id}}</th>
+        <td>{{p.cusine}}</td>
+        <td>{{p.name}}</td>
+        <td>{{p.desc}}</td>
+       <td>{{p.price}}</td>
+      <td>
+        <!-- <button class="btn btn-primary" (click)="edit()" style="float:right" >Edit</button> -->
+        <!-- <button class="btn btn-primary" (click)="delete()" style="float:right"  >Delete</button> -->
+      </td>
+    </tr>
+  </tbody>
+</table>
+<div class="container">
+    <router-outlet></router-outlet>
+  </div>
